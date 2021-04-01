@@ -2277,10 +2277,13 @@ int main( int argc, char *argv[])
 	gtk_table_attach(GTK_TABLE(table_PIC),devVboxPIC,0,1,0,1,0,0,0,0);
 	ReadReserved = gtk_check_button_new_with_label(strings[I_ReadRes]);	//"Read reserved area"
 	gtk_container_add(GTK_CONTAINER(devVboxPIC),GTK_WIDGET(ReadReserved));
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(ReadReserved),TRUE);
 	Write_ID_BKCal = gtk_check_button_new_with_label(strings[I_ID_BKo_W]);	//"Write ID and BKOscCal"
 	gtk_container_add(GTK_CONTAINER(devVboxPIC),GTK_WIDGET(Write_ID_BKCal));
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(Write_ID_BKCal),TRUE);
 	WriteCalib12 = gtk_check_button_new_with_label(strings[I_CalW]);	//"Write Calib 1 and 2"
 	gtk_container_add(GTK_CONTAINER(devVboxPIC),GTK_WIDGET(WriteCalib12));
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(WriteCalib12),TRUE);
 	devFrameOsc = gtk_frame_new(strings[I_OSCW]);	//"Write OscCal"
 	gtk_table_attach(GTK_TABLE(table_PIC),devFrameOsc,0,1,1,2,GTK_FILL,0,5,0);
 	GtkWidget * devVboxOsc = gtk_vbox_new(FALSE,5);
